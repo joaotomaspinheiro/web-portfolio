@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Manrope:wght@300;400;500;600;700&display=swap");
+@import "/utils/colors.scss";
+
+html {
+  scrollbar-color: $primary-color $bg-color;
+  scrollbar-width: thin;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+a,
+p,
+textarea {
+  transition: color 0.5s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+li,
+button {
+  font-family: "Manrope", sans-serif;
+}
+h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+input,
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::selection {
+    background-color: $primary-color;
+  }
+  /* Works on Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $bg-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent-color;
+    border-radius: 20px;
+  }
+}
+
+::placeholder {
+  color: #252525;
+  opacity: 1;
+}

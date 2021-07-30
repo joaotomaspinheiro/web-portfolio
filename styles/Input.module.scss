@@ -1,0 +1,43 @@
+@import "/utils/colors.scss";
+
+.inputContainer {
+  display: flex;
+  background-color: white;
+  padding: 0.5rem;
+
+  .icon {
+    padding-right: 0.2rem;
+
+    svg {
+      height: 24px;
+      width: 24px;
+
+      path,
+      circle {
+        stroke: #252525;
+      }
+    }
+  }
+
+  input,
+  textarea {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 0.9rem;
+    resize: none;
+  }
+
+  textarea {
+    min-height: 10rem;
+
+    &::-webkit-scrollbar-track {
+      background: white;
+    }
+  }
+
+  &:focus-within {
+    border-color: $primary-color;
+  }
+}

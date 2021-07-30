@@ -1,0 +1,32 @@
+.content {
+  flex: 1 1 350px;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 1s;
+}
+
+.animatedArrow {
+  display: grid;
+  place-items: center;
+  animation: slideUpAndDown 2s ease-in-out alternate infinite;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+@keyframes slideUpAndDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(25px);
+  }
+}
+
+@media only screen and (max-width: 1298px) {
+  .animatedArrow {
+    display: none;
+  }
+}

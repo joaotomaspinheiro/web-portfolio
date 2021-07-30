@@ -1,0 +1,55 @@
+@import "@utils/colors.scss";
+
+$icon-gap: 0.8rem;
+
+.button {
+  position: relative;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $icon-gap;
+  padding: 0.8rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+  .icon {
+    height: 24px;
+    width: 24px;
+    justify-self: self-start;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  span {
+    flex: 1;
+    margin-right: $icon-gap;
+  }
+}
+.fill {
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: desaturate(
+      $color: darken($color: $primary-color, $amount: 15),
+      $amount: 30
+    );
+  }
+}
+.outline {
+  background: none;
+  border: 2px solid $primary-color;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+

@@ -1,0 +1,171 @@
+.blobsContainer {
+  position: relative;
+  flex: 1;
+  max-width: 60rem;
+  min-width: 40rem;
+
+  svg {
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+
+    &:nth-child(even) path {
+      fill: hsl(28, 100%, 90%);
+    }
+    &:not(:nth-child(even)) path {
+      fill: hsl(28, 100%, 60%);
+    }
+
+    &:nth-child(1) {
+      height: 20%;
+      animation-name: floating1;
+    }
+
+    &:nth-child(2) {
+      height: 10%;
+      left: 300px;
+      animation-name: floating2;
+      animation-delay: 3s;
+      animation-duration: 8s;
+    }
+
+    &:nth-child(3) {
+      height: 20%;
+      bottom: 300px;
+      animation-name: floating3;
+      animation-delay: 1.5s;
+    }
+    &:nth-child(4) {
+      height: 25%;
+      bottom: 0;
+      right: 0;
+      animation-name: floating4;
+      animation-delay: 1s;
+    }
+    &:nth-child(5) {
+      height: 15%;
+      bottom: 0;
+      left: 200px;
+      animation-name: floating5;
+      animation-delay: 2.5s;
+    }
+    &:nth-child(6) {
+      height: 30%;
+      right: 200px;
+      animation-name: floating6;
+      animation-delay: 2.2s;
+      animation-duration: 25s;
+    }
+    &:nth-child(7) {
+      height: 19%;
+      right: 0;
+      animation-name: floating7;
+      animation-delay: 1.4s;
+    }
+    &:nth-child(8) {
+      height: 14%;
+      bottom: 0;
+      right: 200px;
+      animation-name: floating8;
+      animation-delay: 0.7s;
+    }
+    &:nth-child(9) {
+      height: 12%;
+      bottom: 200px;
+      right: 0;
+      animation-name: floating9;
+      animation-delay: 1.6s;
+    }
+    &:nth-child(10) {
+      height: 25%;
+      bottom: 0;
+      animation-name: floating10;
+      animation-delay: 2.5s;
+      animation-duration: 25s;
+    }
+  }
+
+  .profilePicture {
+    background-color: hsl(28, 100%, 90%);
+    border-radius: 50%;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes floating1 {
+  to {
+    transform: translate(50px, 50px) rotate(90deg);
+  }
+}
+
+@keyframes floating2 {
+  to {
+    transform: translateX(200px) rotate(45deg);
+  }
+}
+
+@keyframes floating3 {
+  to {
+    transform: translateY(-100px) rotate(140deg);
+  }
+}
+
+@keyframes floating4 {
+  to {
+    transform: translate(-20px, -80px) rotate(85deg);
+  }
+}
+
+@keyframes floating5 {
+  to {
+    transform: translateX(150px) rotate(160deg);
+  }
+}
+
+@keyframes floating6 {
+  to {
+    transform: translate(180px, -20px) rotate(90deg);
+  }
+}
+
+@keyframes floating7 {
+  to {
+    transform: translate(50px, 200px) rotate(45deg);
+  }
+}
+
+@keyframes floating8 {
+  to {
+    transform: translate(-40px, -10px) rotate(40deg);
+  }
+}
+
+@keyframes floating9 {
+  to {
+    transform: translate(-20px, -500px) rotate(155deg);
+  }
+}
+
+@keyframes floating10 {
+  to {
+    transform: translate(80px, -40px) rotate(160deg);
+  }
+}
+
+@media only screen and (max-width: 1297px) {
+  .blobsContainer {
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .blobsContainer svg {
+    &:nth-child(2) &:nth-child(4) &:nth-child(9) {
+      display: none;
+    }
+  }
+}
