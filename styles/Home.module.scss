@@ -52,8 +52,16 @@
 }
 
 @media only screen and (max-width: $tablet) {
-  .main section {
-    margin-right: 0;
+  .main {
+    section {
+      margin-right: 0;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -86,13 +94,6 @@
 
     section {
       scroll-snap-align: none;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-    p {
-      font-size: 1.1rem;
     }
   }
 }
