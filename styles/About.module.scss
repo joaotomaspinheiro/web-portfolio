@@ -1,24 +1,85 @@
-.title {
-  margin: 0;
-  font-size: 5rem;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
+@import "/utils/screenSizes.scss";
 
-  .image {
-    height: 400px;
-    width: 500px;
+.header {
+  width: 100%;
+
+  p {
+    max-width: 40em;
   }
 }
-.description {
-  flex: 1;
-  h2 {
-    margin: 0;
-    font-size: 2.5rem;
+.card {
+  position: relative;
+  max-width: 80em;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 4px 8px 20px 5px hsl(28, 50%, 90%);
+  padding: 2em;
+  color: black;
+  
+
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    
+
+    .description {
+      flex: 1;
+
+      .info {
+        display: flex;
+        flex-flow: row nowrap;
+        white-space: nowrap;
+        gap: 0.5em;
+
+        .titles {
+          flex: 1;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-end;
+          gap: 0.5em;
+
+          h3 {
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+
+        .values {
+          flex: 1;
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 0.5em;
+
+          span {
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
   }
-  p {
-    font-size: 1.3rem;
-    line-height: 2rem;
+
+  .downloadCV {
+    display: inline-block;
+    margin-top: 2em;
+  }
+}
+.image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+
+  div {
+    border-radius: 50%;
+    .profilePicture {
+      border-radius: inherit;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .sectionAbout {
+    gap: 2em;
   }
 }

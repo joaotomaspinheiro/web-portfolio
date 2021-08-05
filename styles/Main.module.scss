@@ -1,9 +1,26 @@
+@import "/utils/colors.scss";
+@import "/utils/screenSizes.scss";
+.container {
+  display: flex !important;
+  flex-flow: row wrap;
+}
 .content {
-  flex: 1 1 350px;
+  flex: 1;
+  min-width: 350px;
   max-width: 35rem;
-  display: flex;
-  flex-direction: column;
   animation: slideUp 1s;
+
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.3em 1em;
+    border-radius: 50px;
+    background-color: $primary-color;
+    color: white;
+  }
 }
 
 .animatedArrow {
@@ -25,8 +42,27 @@
   }
 }
 
-@media only screen and (max-width: 1298px) {
+@media only screen and (min-width: $desktop) {
+  .container {
+    gap: 6rem;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: $desktop - 1px) {
+  .container {
+    flex-flow: column nowrap;
+    place-items: flex-start !important;
+    gap: 5%;
+  }
   .animatedArrow {
     display: none;
   }
+  .content {
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
 }

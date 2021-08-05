@@ -1,4 +1,4 @@
-import { configureStore, createStore } from "@reduxjs/toolkit"
+import { configureStore } from "@reduxjs/toolkit"
 import { colorSchemeReducer, routesReducer } from "@redux/reducers";
 
 export const store = configureStore({

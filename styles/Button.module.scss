@@ -9,18 +9,16 @@ $icon-gap: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: $icon-gap;
-  padding: 0.8rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 25px;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   transition: all 0.3s ease-in-out;
 
   .icon {
     height: 24px;
     width: 24px;
-    justify-self: self-start;
 
     svg {
       height: 100%;
@@ -30,11 +28,12 @@ $icon-gap: 0.8rem;
 
   span {
     flex: 1;
-    margin-right: $icon-gap;
   }
 }
+
 .fill {
   background-color: $primary-color;
+  color: white;
 
   &:hover {
     background-color: desaturate(
@@ -42,14 +41,40 @@ $icon-gap: 0.8rem;
       $amount: 30
     );
   }
+  &:active {
+    background-color: desaturate(
+      $color: darken($color: $primary-color, $amount: 20),
+      $amount: 30
+    );
+  }
 }
 .outline {
   background: none;
   border: 2px solid $primary-color;
-  font-weight: 500;
+  color: inherit;
 
   &:hover {
     background-color: $primary-color;
+
+    span {
+      color: white;
+    }
+    .icon svg {
+      path,
+      polyline,
+      circle {
+        stroke: white !important;
+      }
+    }
+  }
+  &:active {
+    background-color: desaturate(
+      $color: darken($color: $primary-color, $amount: 20),
+      $amount: 30
+    );
+    border-color: desaturate(
+      $color: darken($color: $primary-color, $amount: 20),
+      $amount: 30
+    );
   }
 }
-

@@ -1,8 +1,8 @@
+@import "/utils/screenSizes.scss";
+
 .blobsContainer {
-  position: relative;
   flex: 1;
-  max-width: 60rem;
-  min-width: 40rem;
+  position: relative;
 
   svg {
     position: absolute;
@@ -87,10 +87,24 @@
     }
   }
 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    position: relative;
+    max-width: 60rem;
+    min-width: 32rem;
+
+    > div {
+      max-height: 100% !important;
+      max-width: 100% !important;
+    }
+  }
   .profilePicture {
-    background-color: hsl(28, 100%, 90%);
     border-radius: 50%;
-    transform: scale(0.8);
   }
 }
 
@@ -154,18 +168,55 @@
   }
 }
 
-@media only screen and (max-width: 1297px) {
+@media only screen and (max-width: $desktop - 1px) {
   .blobsContainer {
     min-width: 0;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+
+    .circle {
+      min-width: 0;
+      max-width: 30rem;
+    }
   }
 }
 
-@media only screen and (max-width: 960px) {
-  .blobsContainer svg {
-    &:nth-child(2) &:nth-child(4) &:nth-child(9) {
-      display: none;
+@media only screen and (max-width: $tablet) {
+  .blobsContainer {
+    max-width: none;
+
+    .circle {
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .blobsContainer {
+    .circle {
+      width: 100%;
+    }
+    svg {
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(9) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 790px) and (max-width: $mobile) {
+  .blobsContainer {
+    .circle {
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (max-height: 630px) and (max-width: $mobile) {
+  .blobsContainer {
+    .circle {
+      width: 50%;
     }
   }
 }

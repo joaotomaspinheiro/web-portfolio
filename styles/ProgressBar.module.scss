@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  .title {
+    font-weight: 600;
+  }
+
+  .value {
+    flex: 1;
+    font-family: "Manrope", sans-serif;
+    text-align: end;
+  }
+}
+
+.progressBar {
+  position: relative;
+  height: 8px;
+  margin-top: .8em;
+  border-radius: 25px;
+  width: 100%;
+  
+  .background, .foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    border-radius: inherit;
+  }
+  .background {
+    width: inherit;
+    background-color: hsl(28, 90%, 90%);
+  }
+  .foreground {
+    transition: width .7s ease-in-out;
+    animation: slide 1s ease-in-out;
+  }
+}
+
+@keyframes slide {
+  from {
+    width: 0;
+  }
+}

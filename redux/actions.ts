@@ -1,8 +1,8 @@
 import { ColorScheme } from "@utils/colorSchemes";
-import { ActionTypes } from "@redux/actionTypes";
+import ActionTypes from "@redux/actionTypes";
 import { Routes } from "@utils/enums";
 
-export const setSelectedRoute = (route: Routes) => {
+export const setSelectedRoute = (route: Routes | null) => {
   return {
     type: ActionTypes.SET_SELECTED_ROUTE,
     payload: route,

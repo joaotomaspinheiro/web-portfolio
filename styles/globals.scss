@@ -13,17 +13,6 @@ body {
   transition: all 0.5s ease-in-out;
   scroll-behavior: smooth;
 }
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-a,
-p,
-textarea {
-  transition: color 0.5s ease-in-out;
-}
 
 h1,
 h2,
@@ -33,9 +22,8 @@ li,
 button {
   font-family: "Manrope", sans-serif;
 }
-h1 {
+h1,h2,h3,h4,p {
   margin: 0;
-  font-size: 5rem;
 }
 p {
   font-size: 1.3rem;
@@ -51,7 +39,7 @@ a {
   text-decoration: none;
 }
 
-button {
+a, button {
   cursor: pointer;
   background: none;
   outline: none;

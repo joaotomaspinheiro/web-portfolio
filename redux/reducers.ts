@@ -1,6 +1,6 @@
 import { AnyAction } from "redux";
 import { ColorScheme, LightScheme } from "@utils/colorSchemes";
-import { ActionTypes } from "@redux/actionTypes";
+import ActionTypes from "@redux/actionTypes";
 import { Routes } from "@utils/enums";
 
 const initialRoute: Routes = Routes.MAIN;

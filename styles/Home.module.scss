@@ -1,17 +1,22 @@
 @use "./Navbar.module.scss" as navbar;
+@import "/utils/screenSizes.scss";
 
 .container {
   height: 100vh;
-  overflow-x: hidden;
 }
 
 .main {
+  height: inherit;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
   section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 5%;
+    height: inherit;
+    scroll-snap-align: start;
+    display: grid;
+    place-items: center;
+    padding: 2rem 5%;
     margin-right: navbar.$width;
     max-height: 100%;
   }
@@ -24,40 +29,19 @@
   }
 }
 
-/* Desktop */
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: $desktop) {
   .main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-
-    section {
-      height: inherit;
-      scroll-snap-align: start;
-
-      &:nth-child(1) {
-        padding: 0;
-        gap: 6rem;
-      }
+    h1 {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 1.3rem;
     }
   }
 }
 
-@media only screen and (min-width: 1298px) and (max-width: 1499px) {
+@media only screen and (max-width: $desktop - 1px) {
   .main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-
-    section {
-      height: inherit;
-      scroll-snap-align: start;
-
-      &:nth-child(1) {
-        padding: 0;
-        gap: 6rem;
-      }
-    }
     h1 {
       font-size: 4rem;
     }
@@ -67,29 +51,43 @@
   }
 }
 
-@media only screen and (max-width: 1297px) {
-  .main {
-    section:nth-child(1) {
-      display: block;
-    }
-    h1 {
-      font-size: 4rem;
-    }
-    p {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: $tablet) {
   .main section {
     margin-right: 0;
   }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: $mobile) {
   .main {
+    height: auto;
+    scroll-snap-type: none;
+    overflow-y: none;
+    overflow-x: none;
+
+    section {
+      scroll-snap-align: none;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) and (orientation: landscape) {
+  .main {
+    height: auto;
+    scroll-snap-type: none;
+    overflow-y: none;
+    overflow-x: none;
+
+    section {
+      scroll-snap-align: none;
+    }
+
     h1 {
       font-size: 3rem;
     }

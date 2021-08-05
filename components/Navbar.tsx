@@ -1,11 +1,13 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useEffect } from "react";
 import { setSelectedRoute } from "@redux/actions";
 import { useAppDispatch, useAppSelector } from "@redux/hooks";
-import styles from "@styles/Navbar.module.scss";
 import { Routes } from "@utils/enums";
+import styles from "@styles/Navbar.module.scss";
+import { ColorScheme } from "@utils/colorSchemes";
 
 export default function Navbar() {
-  const selectedRoute = useAppSelector((state) => state.route) as Routes;
+  const selectedRoute = useAppSelector((state) => state.route);
+  const colorScheme = useAppSelector(state => state.colorScheme) as ColorScheme;
   const dispatch = useAppDispatch();
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -29,41 +31,33 @@ export default function Navbar() {
     }
   };
 
+
   return (
     <nav className={styles.navbar}>
       <ul>
         <li>
           <a
+            id={`${Routes[Routes.ABOUT]}-item`}
+            style={selectedRoute === Routes.ABOUT ? {color: colorScheme.primary} : undefined}
             onClick={handleClick}
-            style={
-              selectedRoute === Routes.ABOUT
-                ? { color: "hsl(28, 100%, 60%)" }
-                : undefined
-            }
           >
             About
           </a>
         </li>
         <li>
           <a
+            id={`${Routes[Routes.PROJECTS]}-item`}
+            style={selectedRoute === Routes.PROJECTS ? {color: colorScheme.primary} : undefined}
             onClick={handleClick}
-            style={
-              selectedRoute === Routes.PROJECTS
-                ? { color: "hsl(28, 100%, 60%)" }
-                : undefined
-            }
           >
             Projects
           </a>
         </li>
         <li>
           <a
+            id={`${Routes[Routes.CONTACT]}-item`}
+            style={selectedRoute === Routes.CONTACT ? {color: colorScheme.primary} : undefined}
             onClick={handleClick}
-            style={
-              selectedRoute === Routes.CONTACT
-                ? { color: "hsl(28, 100%, 60%)" }
-                : undefined
-            }
           >
             Contact
           </a>
