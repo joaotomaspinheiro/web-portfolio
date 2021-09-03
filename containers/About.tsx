@@ -1,35 +1,16 @@
-import { useEffect } from "react";
 import Image from "next/image";
 import Button from "@components/Button";
-import TabBar from "@components/TabBar";
+import TabBar from "@containers/TabBar";
 import { Routes } from "@utils/enums";
 import ProfilePicture from "@images/profPic.jpg";
 import styles from "@styles/About.module.scss";
 
-const getAge = (birthDate: Date): number => {
-  const today = new Date();
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const month = today.getMonth() - birthDate.getMonth();
-
-  if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate()))
-    age--;
-
-  return age;
-};
-
 export default function About() {
-  useEffect(() => {}, []);
-
   return (
     <section id={Routes[Routes.ABOUT]} className={styles.sectionAbout}>
       <div className={styles.header}>
-        <h1>About</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, modi
-          eaque! Nemo quam labore voluptate, quibusdam, dolores fugit explicabo
-          non, nulla fuga necessitatibus totam eius! Dolorem error recusandae
-          laudantium magni.
-        </p>
+        <h1 id={`${Routes[Routes.ABOUT]}-header`}>About</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui soluta consectetur doloremque officia harum totam alias aut, culpa fuga enim nobis voluptas, modi at minus, ex voluptatem animi. Doloribus, illum?</p>
       </div>
 
       <div className={styles.card}>
@@ -50,13 +31,11 @@ export default function About() {
             <div className={styles.info}>
               <div className={styles.titles}>
                 <h3>Full Name:</h3>
-                <h3>Age:</h3>
                 <h3>Nationality:</h3>
                 <h3>English:</h3>
               </div>
               <div className={styles.values}>
                 <span>João Pinheiro</span>
-                <span>{getAge(new Date("2002/10/24"))}</span>
                 <span>Portuguese</span>
                 <span>Upper Intermediate</span>
               </div>
@@ -65,7 +44,7 @@ export default function About() {
           <TabBar />
         </div>
         <a className={styles.downloadCV} href="/Curriculum.pdf" target="_blank">
-          <Button text="Download CV" />
+          <Button text="Download Resume" />
         </a>
       </div>
     </section>

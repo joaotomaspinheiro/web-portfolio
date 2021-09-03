@@ -1,7 +1,7 @@
 @import "/utils/screenSizes.scss";
 
 .blobsContainer {
-  flex: 1;
+  flex: 2;
   position: relative;
 
   svg {
@@ -88,9 +88,8 @@
   }
 
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
   }
 
   .circle {
@@ -170,23 +169,18 @@
 
 @media only screen and (max-width: $desktop - 1px) {
   .blobsContainer {
-    min-width: 0;
-    width: 100%;
 
     .circle {
-      min-width: 0;
-      max-width: 30rem;
-      width: 20rem;
+      min-width: 28rem;
     }
   }
 }
 
 @media only screen and (max-width: $tablet) {
   .blobsContainer {
-    max-width: none;
 
     .circle {
-      width: 70%;
+      min-width: 24rem;
     }
   }
 }
@@ -194,7 +188,7 @@
 @media only screen and (max-width: $mobile) {
   .blobsContainer {
     .circle {
-      width: 100%;
+      min-width: 80vw;
     }
     svg {
       &:nth-child(2),
@@ -209,7 +203,7 @@
 @media only screen and (max-height: 790px) and (max-width: $mobile) {
   .blobsContainer {
     .circle {
-      width: 70%;
+      min-width: 70vw;
     }
   }
 }
@@ -217,7 +211,7 @@
 @media only screen and (max-height: 630px) and (max-width: $mobile) {
   .blobsContainer {
     .circle {
-      width: 50%;
+      min-width: 50vw;
     }
   }
 }

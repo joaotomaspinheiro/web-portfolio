@@ -1,21 +1,21 @@
 @import "/utils/screenSizes.scss";
-$width: 200px;
+$width: 160px;
 
 .navbar {
-  display: block;
   position: fixed;
   top: 0;
   right: 0;
-  margin-top: 80px;
-  width: $width;
-
+  z-index: 1;
+  
+  
   ul {
     list-style: none;
+    padding: 0;
     animation: slideLeft 1s;
 
     li {
       padding: 0.5rem;
-      
+
       a {
         cursor: pointer;
         font-weight: 600;
@@ -36,9 +36,63 @@ $width: 200px;
     transform: translateX(500px);
   }
 }
-
-@media only screen and (max-width: $tablet) {
+.navIcon {
+  display: none;
+}
+@media only screen and (min-width: $desktop) {
   .navbar {
-    display: none;
+    width: $width;
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: $desktop - 1px) {
+  .navbar {
+    padding: 0 1em;
+    
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .navbar {
+    top: unset;
+    right: unset;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    color: black;
+    transform: translateY(72px);
+    transition: transform .8s;
+    
+    .navIcon, ul {
+      flex: 1;
+      background: white;
+      box-shadow: 4px 8px 20px hsl(0, 0%, 92%);
+    }
+
+    .navIcon {
+      border-radius: 50% 50% 0 0;
+      padding: .5em;
+      display: flex;
+      align-items: center;
+      transition: transform .8s;
+
+      svg {
+        transition: transform .5s;
+      }
+    }
+    ul {
+      margin: 0;
+      width: 100vw;
+      border-radius: 2em 2em 0 0;
+      padding: 1em;
+    }
   }
 }

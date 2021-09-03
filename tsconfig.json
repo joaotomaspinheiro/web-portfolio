@@ -19,12 +19,12 @@
       "@pages/*": ["./pages/*"],
       "@api/*": ["./pages/api/*"],
       "@components/*": ["./components/*"],
-      "@sections/*": ["components/sections/*"],
+      "@containers/*": ["./containers/*"],
       "@styles/*": ["./styles/*"],
       "@utils/*": ["utils/*"],
       "@assets/*": ["./assets/*"],
       "@images/*": ["./assets/images/*"],
-      "@redux/*": ["./redux/*"]
+      "@store/*": ["store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
