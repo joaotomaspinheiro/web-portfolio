@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Blob from "@components/Blob";
+import Blob from "@containers/Blob";
 import { Routes } from "@utils/enums";
 import ArrowDown from "@images/arrow-down.svg"
 import styles from "@styles/Main.module.scss"
