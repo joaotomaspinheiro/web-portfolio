@@ -1,0 +1,23 @@
+@import "/utils/colors.scss";
+
+.tag {
+  padding: 4px 16px;
+  border-radius: 16px;
+  background: lighten($color: $primary-color, $amount: 35);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $primary-color;
+  display: grid;
+  place-items: center;
+}
+.icon {
+  display: flex;
+  height: 24px;
+  margin-left: 5px;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

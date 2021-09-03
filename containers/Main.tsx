@@ -9,8 +9,8 @@ export default function Main() {
     <section id={Routes[Routes.MAIN]} className={styles.container}>
       <Blob />
       <div className={styles.content}>
-        <h1>Hello!</h1>
-        <h1>I&apos;m João!</h1>
+        <h1 id={`${Routes[Routes.MAIN]}-header`}>Hello!</h1>
+        <h1 id={`${Routes[Routes.MAIN]}-header`}>I&apos;m João!</h1>
         <h3>Frontend Developer</h3>
 
         <div className={styles.animatedArrow}>

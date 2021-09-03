@@ -1,24 +1,18 @@
-.title {
-    margin: 0;
-    font-size: 5rem;
+@import "/utils/screenSizes.scss";
+
+.header {
+  margin: 5% 0;
+}
+.projects {
+  margin: 0 5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  gap: 2em;
+}
+
+@media only screen and (max-width: $tablet) {
+  .projects {
+    flex-flow: row wrap;
   }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  
-    .image {
-      height: 400px;
-      width: 500px;
-    }
-  }
-  .description {
-    flex: 1;
-    h2 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    p {
-      font-size: 1.3rem;
-      line-height: 2rem;
-    }
-  }
+}
