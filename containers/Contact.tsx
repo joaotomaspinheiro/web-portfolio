@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <section id={Routes[Routes.CONTACT]} className={styles.sectionContact}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Contact</h1>
+        <h1 className={styles.title} id={`${Routes[Routes.CONTACT]}-header`}>Contact</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab non
           suscipit eum, voluptates vel vitae soluta qui, perferendis, nihil

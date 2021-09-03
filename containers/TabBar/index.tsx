@@ -1,11 +1,10 @@
 import { CSSProperties, MouseEvent, useState } from "react";
-import Button from "@components/Button"
 import HardSkills from "./HardSkills";
 import SoftSkills from "./SoftSkills";
-import Hobbies from "./Hobbies";
 import { AboutItems } from "@utils/enums";
-import { useAppSelector } from "@redux/hooks";
+import { useAppSelector } from "@store/hooks";
 import { ColorScheme } from "@utils/colorSchemes";
+
 import styles from "@styles/TabBar.module.scss";
 
 export default function TabBar() {
@@ -52,26 +51,13 @@ export default function TabBar() {
           >
             Soft skills
           </li>
-          <li
-            id={AboutItems[AboutItems.HOBBIES]}
-            style={
-              selectedItem === AboutItems[AboutItems.HOBBIES]
-                ? selectedStyle
-                : undefined
-            }
-            onClick={handleClick}
-          >
-            Hobbies
-          </li>
         </ul>
         <div className={styles.itemContainer}>
           {selectedItem === AboutItems[AboutItems.HARD_SKILLS] ? (
             <HardSkills />
           ) : selectedItem === AboutItems[AboutItems.SOFT_SKILLS] ? (
             <SoftSkills />
-          ) : (
-            <Hobbies />
-          )}
+          ) : undefined}
         </div>
       
     </div>

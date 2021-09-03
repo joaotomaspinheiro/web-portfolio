@@ -1,0 +1,59 @@
+@import "/utils/colors.scss";
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: inherit;
+  border-radius: 16px;
+  min-width: 250px;
+  max-width: 22em;
+  box-shadow: 4px 8px 20px 5px hsl(0, 0%, 92%);
+  color: inherit;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.image {
+  cursor: pointer;
+  position: relative;
+  height: 250px;
+  border-radius: inherit;
+
+  div {
+    border-radius: inherit;
+  }
+}
+.content {
+  flex: 1;
+  padding: 1em;
+}
+.title {
+  font-size: 1.8rem !important;
+}
+.description {
+  font-size: 1rem !important;
+}
+.tags,
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.tags {
+  margin: 0.5em 0;
+}
+.technologies {
+  margin-top: 0.5em;
+}
+.usedTechHeader {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.viewMore {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 1em 1em 0;
+}

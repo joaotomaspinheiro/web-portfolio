@@ -6,19 +6,16 @@
 }
 
 .main {
-  height: inherit;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   overflow-x: hidden;
 
   section {
-    height: inherit;
-    scroll-snap-align: start;
-    display: grid;
-    place-items: center;
     padding: 2rem 5%;
-    margin-right: navbar.$width;
-    max-height: 100%;
+
+
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -29,19 +26,11 @@
   }
 }
 
-@media only screen and (min-width: $desktop) {
+@media only screen and (min-width: $desktop){
   .main {
-    h1 {
-      font-size: 5rem;
+    section {
+      margin-right: navbar.$width;
     }
-    p {
-      font-size: 1.3rem;
-    }
-  }
-}
-
-@media only screen and (max-width: $desktop - 1px) {
-  .main {
     h1 {
       font-size: 4rem;
     }
@@ -51,7 +40,21 @@
   }
 }
 
-@media only screen and (max-width: $tablet) {
+@media only screen and (min-width: $desktop) and (min-height: 880px) {
+  .main {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    
+    section {
+      height: 100vh;
+      scroll-snap-align: start;
+      max-height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop - 1px) {
   .main {
     section {
       margin-right: 0;
@@ -65,35 +68,13 @@
   }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width: $mobile) {
   .main {
-    height: auto;
-    scroll-snap-type: none;
-    overflow-y: none;
-    overflow-x: none;
-
-    section {
-      scroll-snap-align: none;
-    }
     h1 {
       font-size: 3rem;
     }
     p {
       font-size: 1.1rem;
-    }
-  }
-}
-
-@media only screen and (max-width: $tablet) and (orientation: landscape) {
-  .main {
-    height: auto;
-    scroll-snap-type: none;
-    overflow-y: none;
-    overflow-x: none;
-
-    section {
-      scroll-snap-align: none;
     }
   }
 }

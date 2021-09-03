@@ -1,5 +1,5 @@
 import ProgressBar from "@components/ProgressBar";
-import { useAppSelector } from "@redux/hooks";
+import { useAppSelector } from "@store/hooks";
 import styles from "@styles/HardSkills.module.scss";
 import { ColorScheme } from "@utils/colorSchemes";
 
