@@ -1,12 +1,11 @@
 export enum Routes {
-    MAIN,
-    ABOUT,
-    PROJECTS,
-    CONTACT
+    MAIN = "main",
+    ABOUT = "about",
+    PROJECTS = "projects",
+    CONTACT = "contact"
 }
 
 export enum AboutItems {
-    HARD_SKILLS,
-    SOFT_SKILLS,
-    HOBBIES
+    HARD_SKILLS = "hard skills",
+    SOFT_SKILLS = "soft skills"
 }

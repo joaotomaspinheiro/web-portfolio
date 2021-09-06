@@ -39,8 +39,8 @@ const usedTechnologies: UsedTechnologies[] = [
 
 export default function Projects() {
   return (
-    <section id={Routes[Routes.PROJECTS]}>
-      <h1 className={styles.header} id={`${Routes[Routes.PROJECTS]}-header`}>Projects</h1>
+    <section id={Routes.PROJECTS}>
+      <h1 className={styles.header} id={`${Routes.PROJECTS}-header`}>Projects</h1>
       <div className={styles.projects}>
         <Card
           image={EcoMap}
@@ -48,6 +48,7 @@ export default function Projects() {
           description="EcoMap is a project aiming to reduce urban waste by providing the location of the recycle bins to people."
           tags={tags}
           usedTechnologies={usedTechnologies}
+          demo="https://github.com/joaotomaspinheiro/EcoMap"
           sourceCode="https://github.com/joaotomaspinheiro/EcoMap"
         />
         <Card
