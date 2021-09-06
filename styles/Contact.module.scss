@@ -1,44 +1,66 @@
 @import "/utils/colors.scss";
 @import "/utils/screenSizes.scss";
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  margin: 5% 0;
+}
 
-.sectionContact {
-  display: flex !important;
-  place-items: center;
-  flex-flow: row wrap;
+.contacts {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5%;
+  ul {
+    padding: 0;
+  }
+}
 
-  .content {
-    flex: 1 1 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+/*.overlay {
+  position: relative;
+  width: 20rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    font-size: 1.2rem;
+    width: inherit;
   }
 
-  .overlay {
-    position: relative;
-    width: 20rem;
-    margin: 0 10% 3rem 10%;
-    display: flex;
-    flex-direction: column;
-
-    button {
-      font-size: 1.2rem;
-      width: inherit;
-      z-index: 1;
-    }
-
-    .overlayText {
-      position: absolute;
-      top: 45%;
-      align-self: center;
-      font-family: "Manrope";
-      padding: 0.5rem;
-      opacity: 0;
-    }
+  .overlayText {
+    position: absolute;
+    top: 45%;
+    align-self: center;
+    font-family: "Manrope";
+    padding: 0.5rem;
+    opacity: 0;
+    z-index: -1;
   }
+}*/
+.image {
+  position: relative;
+  min-width: 30vw;
+  min-height: 30vw;
+  flex: 1;
+  justify-self: center;
+  align-self: center;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap-reverse;
+}
+.footer {
+  margin: 4em 0;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
 
-  .show {
-    animation: slideDownAndUp 2s ease-in-out 2 alternate;
-  }
+/*.show {
+  animation: slideDownAndUp 2s ease-in-out 2 alternate;
 }
 
 @keyframes slideDownAndUp {
@@ -54,15 +76,15 @@
     opacity: 1;
     transform: translateY(30px);
   }
-}
+}*/
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width: $mobile) {
-  .overlay {
-    width: 100% !important;
-    
-    button {
-      font-size: 1.1rem !important;
-    }
+  .image {
+    min-height: 40vw;
+    width: 100%;
+  }
+  .footer {
+    margin-top: 0;
   }
 }

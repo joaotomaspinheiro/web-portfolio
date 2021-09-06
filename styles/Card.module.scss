@@ -55,5 +55,8 @@
 .viewMore {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 0 1em 1em 0;
+  white-space: nowrap;
 }

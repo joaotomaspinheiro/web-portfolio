@@ -62,7 +62,7 @@ $width: 160px;
     top: unset;
     right: unset;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +90,7 @@ $width: 160px;
     }
     ul {
       margin: 0;
-      width: 100vw;
+      width: 100%;
       border-radius: 2em 2em 0 0;
       padding: 1em;
     }
