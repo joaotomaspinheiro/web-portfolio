@@ -1,8 +1,12 @@
+import Image from "next/image";
 import { useState } from "react";
-import { EnvelopeSimple } from "phosphor-react";
+import { EnvelopeSimple, GithubLogo, LinkedinLogo, Phone } from "phosphor-react";
 import Button from "@components/Button";
 import styles from "@styles/Contact.module.scss";
+import ContactList  from "./ContactList";
 import { Routes } from "@utils/enums";
+import Meeting from "@images/meeting.svg";
+import ContactItem from "@components/ContactItem";
 
 const EMAIL = "joaotomasp@gmail.com";
 const ANIMATION_DURATION = 2000;
@@ -19,33 +23,38 @@ export default function Contact() {
   };
 
   return (
-    <section id={Routes[Routes.CONTACT]} className={styles.sectionContact}>
-      <div className={styles.content}>
-        <h1 className={styles.title} id={`${Routes[Routes.CONTACT]}-header`}>Contact</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab non
-          suscipit eum, voluptates vel vitae soluta qui, perferendis, nihil
-          illum! Sed, architecto! At, ex id! Et rerum corrupti libero! Lorem,
-          ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          veritatis molestiae inventore placeat libero corporis quam minus ullam
-          quis dicta quae recusandae expedita nostrum odio ex maxime, soluta
-          voluptas saepe.
-        </p>
-      </div>
-
-      <div className={styles.overlay}>
-        <Button
-          icon={<EnvelopeSimple />}
-          weight="outline"
-          text={EMAIL}
-          onClick={handleClick}
-        />
-        <div
-          className={`${styles.overlayText} ${showAnimation && styles.show}`}
-        >
-          Copied to clipboard!
+    <section id={Routes.CONTACT} className={styles.container}>
+      <h1 className={styles.header} id={`${Routes.CONTACT}-header`}>
+        Let&apos;s talk
+      </h1>
+      <div className={styles.row}>
+        <div className={styles.contacts}>
+        <ContactList>
+          <ContactItem text={EMAIL} href="mailto:joaotomasp@gmail.com" icon={<EnvelopeSimple />}  />
+          <ContactItem text="/joaotomaspinheiro" href="https://linkedin.com/in/joaotomaspinheiro" icon={<LinkedinLogo />} />
+          <ContactItem  text="/joaotomaspinheiro" href="https://github.com/joaotomaspinheiro" icon={<GithubLogo />}/>
+        </ContactList>
+          {/* <div className={styles.overlay}>
+            <Button
+              icon={<EnvelopeSimple />}
+              weight="outline"
+              text={EMAIL}
+              onClick={handleClick}
+            />
+            <div
+              className={`${styles.overlayText} ${
+                showAnimation && styles.show
+              }`}
+            >
+              Copied to clipboard!
+            </div>
+          </div> */}
+        </div>
+        <div className={styles.image}>
+          <Image src={Meeting} alt="Team meeting" layout="fill" />
         </div>
       </div>
+      <footer className={styles.footer}>&copy; {new Date().getFullYear()} João Pinheiro. All rights reserved.</footer>
     </section>
   );
 }
