@@ -11,10 +11,8 @@ export default function About() {
       <div className={styles.header}>
         <h1 id={`${Routes.ABOUT}-header`}>About</h1>
         <p>
-          Systems Programming Student Information at the School of Technology
-          and Management of Águeda at the University of Aveiro. Ambitious and
-          ready to innovate and solve present and future problems through
-          technology.
+          I&apos;m an ambitious frontend developer ready to build and design digital
+          experiences through the web.
         </p>
       </div>
 
@@ -25,7 +23,7 @@ export default function About() {
               <Image
                 src={ProfilePicture}
                 className={styles.profilePicture}
-                alt=""
+                alt="Image of me"
                 height={150}
                 width={150}
                 quality={100}
@@ -49,7 +47,7 @@ export default function About() {
           <TabBar />
         </div>
         <a className={styles.downloadCV} href="/Resume.pdf" target="_blank">
-          <Button text="Download Resume" />
+          <Button text="Resume" />
         </a>
       </div>
     </section>

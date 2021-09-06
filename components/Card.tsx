@@ -24,7 +24,7 @@ export default function Card(props: Props) {
       <div className={styles.image} onClick={props.demo ? () => handleClick(props.demo!) : undefined}>
         <Image
           src={props.image}
-          alt=""
+          alt="Project image"
           layout="fill"
           objectFit="cover"
           placeholder="blur"
@@ -51,7 +51,7 @@ export default function Card(props: Props) {
                 {usedTechnology.image && (
                   <Image
                     src={usedTechnology.image}
-                    alt=""
+                    alt="Technology image"
                     height={32}
                     width={32}
                   />

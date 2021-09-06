@@ -14,7 +14,7 @@ export default function Main() {
         <h3>Frontend Developer</h3>
 
         <div className={styles.animatedArrow}>
-          <Image src={ArrowDown} alt="" onClick={() => document.getElementById(Routes.ABOUT)!.scrollIntoView({behavior: "smooth"})} />
+          <Image src={ArrowDown} alt="Arrow down" onClick={() => document.getElementById(Routes.ABOUT)!.scrollIntoView({behavior: "smooth"})} />
         </div>
       </div>
     </section>
