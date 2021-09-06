@@ -45,10 +45,6 @@ a, button {
   background: none;
   outline: none;
   border: none;
-}
-
-* {
-  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -56,6 +52,10 @@ a, button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+* {
+  box-sizing: border-box;
 
   &::selection {
     background-color: $primary-color;
