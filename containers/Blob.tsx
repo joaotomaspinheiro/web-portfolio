@@ -71,7 +71,7 @@ export default function Blob() {
           <Image
             className={styles.profilePicture}
             src={ProfilePicture}
-            alt="Picture of João Pinheiro"
+            alt="Image of me"
             placeholder="blur"
             layout="responsive"
             objectFit="cover"
