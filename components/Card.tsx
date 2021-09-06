@@ -66,7 +66,7 @@ export default function Card(props: Props) {
           <Button
             icon={<Globe />}
             text="Demo"
-            weight="text"
+            weight="fill"
             onClick={() => handleClick(props.demo!)}
           />
         )}

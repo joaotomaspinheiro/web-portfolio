@@ -1,0 +1,35 @@
+@import "/utils/colors.scss";
+
+.item {
+  list-style: none;
+  color: inherit;
+  padding: 1em;
+
+  .link {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1em;
+    transition: color 0.3s;
+
+    .icon {
+      height: 2vw;
+      width: 2vw;
+      min-height: 32px;
+      min-width: 32px;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .text {
+      font-size: 1.1rem;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

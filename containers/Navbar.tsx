@@ -5,6 +5,7 @@ import { Routes } from "@utils/enums";
 import { ColorScheme } from "@utils/colorSchemes";
 import { ArrowUp } from "phosphor-react";
 import styles from "@styles/Navbar.module.scss";
+
 const animations = {
   navbar: { transform: "translate(0)"},
   icon: { transform: "" },
@@ -25,22 +26,20 @@ export default function Navbar() {
 
   const [showMenu, setShowMenu] = useState(false);
 
-  
-
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     const route = e.target as HTMLAnchorElement;
     document
-      .getElementById(route.text.toUpperCase())!
+      .getElementById(route.text.toLowerCase())!
       .scrollIntoView({ behavior: "smooth" });
 
-    switch (route.text.toUpperCase()) {
-      case Routes[Routes.ABOUT]:
+    switch (route.text.toLowerCase()) {
+      case Routes.ABOUT:
         dispatch(setSelectedRoute(Routes.ABOUT));
         break;
-      case Routes[Routes.PROJECTS]:
+      case Routes.PROJECTS:
         dispatch(setSelectedRoute(Routes.PROJECTS));
         break;
-      case Routes[Routes.CONTACT]:
+      case Routes.CONTACT:
         dispatch(setSelectedRoute(Routes.CONTACT));
         break;
       default:

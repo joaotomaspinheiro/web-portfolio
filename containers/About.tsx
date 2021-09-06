@@ -7,10 +7,15 @@ import styles from "@styles/About.module.scss";
 
 export default function About() {
   return (
-    <section id={Routes[Routes.ABOUT]} className={styles.sectionAbout}>
+    <section id={Routes.ABOUT} className={styles.sectionAbout}>
       <div className={styles.header}>
-        <h1 id={`${Routes[Routes.ABOUT]}-header`}>About</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui soluta consectetur doloremque officia harum totam alias aut, culpa fuga enim nobis voluptas, modi at minus, ex voluptatem animi. Doloribus, illum?</p>
+        <h1 id={`${Routes.ABOUT}-header`}>About</h1>
+        <p>
+          Systems Programming Student Information at the School of Technology
+          and Management of Águeda at the University of Aveiro. Ambitious and
+          ready to innovate and solve present and future problems through
+          technology.
+        </p>
       </div>
 
       <div className={styles.card}>
@@ -43,7 +48,7 @@ export default function About() {
           </div>
           <TabBar />
         </div>
-        <a className={styles.downloadCV} href="/Curriculum.pdf" target="_blank">
+        <a className={styles.downloadCV} href="/Resume.pdf" target="_blank">
           <Button text="Download Resume" />
         </a>
       </div>

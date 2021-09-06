@@ -11,7 +11,6 @@
   section {
     padding: 2rem 5%;
 
-
     &:nth-child(3) {
       display: flex;
       flex-direction: column;
@@ -64,6 +63,17 @@
     }
     p {
       font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .main {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.1rem;
     }
   }
 }
