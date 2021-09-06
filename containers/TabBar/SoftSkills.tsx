@@ -11,12 +11,27 @@ export default function SoftSkills() {
   return (
     <div className={styles.softSkills}>
       <h2>Soft Skills</h2>
-      <ProgressBar title="Resilience" value={80} color={colorScheme.primary} />
       <ProgressBar
-        title="Adaptable"
-        value={60}
+        title="Team player"
+        value={90}
         color={colorScheme.primary}
       />
+      <ProgressBar
+        title="Adaptable"
+        value={80}
+        color={colorScheme.primary}
+      />
+      <ProgressBar title="Resilience" value={60} color={colorScheme.primary} />
+      
+      
+      <ProgressBar
+        title="Communication"
+        value={50}
+        color={colorScheme.primary}
+      />
+      
+      
+      
     </div>
   );
 }
