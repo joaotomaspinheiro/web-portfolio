@@ -76,7 +76,6 @@ export default function Home() {
         />
         <meta property="og:url" content="https://joaopinheiro.vercel.app/" />
         <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <style jsx global>
