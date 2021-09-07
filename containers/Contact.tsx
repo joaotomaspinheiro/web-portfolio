@@ -35,7 +35,7 @@ export default function Contact() {
           </ContactList>
         </div>
         <div className={styles.image}>
-          <Image src={Meeting} alt="Team meeting" layout="fill" />
+          <Image src={Meeting} alt="Team meeting" layout="fill" loading="lazy" />
         </div>
       </div>
       <footer className={styles.footer}>
