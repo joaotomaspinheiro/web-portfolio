@@ -75,7 +75,6 @@ export default function Blob() {
             placeholder="blur"
             layout="responsive"
             objectFit="cover"
-            quality={100}
             priority
           />
       </div>
