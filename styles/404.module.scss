@@ -1,0 +1,33 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+
+  .image {
+    width: 100vw;
+    max-width: 500px;
+    animation: slideUpAndDown 2s ease-in-out infinite alternate;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .description {
+      font-weight: 500;
+    }
+  }
+}
+
+@keyframes slideUpAndDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(25px);
+    }
+  }
