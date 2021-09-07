@@ -53,17 +53,9 @@ export default function Projects() {
         />
         <Card
           image={RandomImage}
-          title="Lorem ipsum"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nisi aut
-          odit delectus quam."
-          sourceCode="https://github.com/joaotomaspinheiro"
-        />
-        <Card
-          image={RandomImage}
-          title="Lorem ipsum"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nisi aut
-          odit delectus quam."
-          sourceCode="https://github.com/joaotomaspinheiro"
+          title="Real Estate CRM"
+          description="Personal CRM for a real estate agent to manage properties and leads."
+          sourceCode="https://github.com/joaotomaspinheiro/jaimobiliaria"
         />
       </div>
     </section>
