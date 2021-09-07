@@ -72,10 +72,11 @@ export default function Home() {
         <meta property="og:title" content="Hello, I'm João!" />
         <meta
           property="og:description"
-          content="Hello, I'm João! I'm an ambitious frontend developer ready to build and design digital experiences through the web."
+          content="I'm an ambitious frontend developer ready to build and design digital experiences through the web."
         />
         <meta property="og:url" content="https://joaopinheiro.vercel.app/" />
         <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <style jsx global>
