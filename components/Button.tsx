@@ -23,12 +23,12 @@ export default function Button(props: Props) {
       onClick={props.onClick}
     >
       {props.icon && (
-        <div
+        <i
           className={styles.icon}
           style={props.iconPosition === "end" ? { order: 2 } : undefined}
         >
           {props.icon}
-        </div>
+        </i>
       )}
 
       <span>{props.text}</span>

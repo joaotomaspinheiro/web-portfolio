@@ -1,3 +1,4 @@
+@import "/utils/colors.scss";
 @import "/utils/screenSizes.scss";
 $width: 160px;
 
@@ -23,7 +24,7 @@ $width: 160px;
         transition: color 0.2s ease-in-out !important;
 
         &:hover {
-          color: hsl(28, 100%, 60%);
+          color: $primary-color;
         }
       }
     }

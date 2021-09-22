@@ -43,8 +43,6 @@
 }*/
 .image {
   position: relative;
-  min-width: 30vw;
-  min-height: 30vw;
   flex: 1;
   justify-self: center;
   align-self: center;
@@ -77,6 +75,20 @@
     transform: translateY(30px);
   }
 }*/
+
+@media only screen and (min-width: $desktop) {
+  .image {
+    min-width: 30rem;
+    min-height: 30rem;
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  .image {
+    min-width: 30vw;
+    min-height: 30vw;
+  }
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width: $mobile) {

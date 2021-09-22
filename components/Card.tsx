@@ -1,9 +1,13 @@
 import Button from "./Button";
 import { GithubLogo, Globe } from "phosphor-react";
 import styles from "@styles/Card.module.scss";
-import { UsedTechnologies } from "../containers/Projects";
 import Tag, { Props as TagType } from "./Tag";
 import Image from "next/image";
+
+type UsedTechnologies = {
+  name: string;
+  image: StaticImageData;
+};
 
 interface Props {
   image: StaticImageData;
@@ -16,12 +20,14 @@ interface Props {
 }
 
 export default function Card(props: Props) {
-
-  const handleClick = (url: string) => window.open(url, "_blank")
+  const handleClick = (url: string) => window.open(url, "_blank");
 
   return (
     <div className={styles.card}>
-      <div className={styles.image} onClick={props.demo ? () => handleClick(props.demo!) : undefined}>
+      <div
+        className={styles.image}
+        onClick={props.demo ? () => handleClick(props.demo!) : undefined}
+      >
         <Image
           src={props.image}
           alt="Project image"
@@ -48,14 +54,12 @@ export default function Card(props: Props) {
                 title={usedTechnology.name}
                 className={styles.usedTechnology}
               >
-                {usedTechnology.image && (
-                  <Image
-                    src={usedTechnology.image}
-                    alt="Technology image"
-                    height={32}
-                    width={32}
-                  />
-                )}
+                <Image
+                  src={usedTechnology.image}
+                  alt="Technology image"
+                  height={32}
+                  width={32}
+                />
               </span>
             ))}
           </div>

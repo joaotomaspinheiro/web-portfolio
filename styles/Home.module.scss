@@ -2,6 +2,7 @@
 @import "/utils/screenSizes.scss";
 
 .container {
+  position: relative;
   height: 100vh;
 }
 
@@ -25,10 +26,12 @@
   }
 }
 
-@media only screen and (min-width: $desktop){
+@media only screen and (min-width: $desktop) {
   .main {
     section {
-      margin-right: navbar.$width;
+      margin: 0 auto;
+      max-width: 100rem;
+      //margin-right: navbar.$width;
     }
     h1 {
       font-size: 4rem;
@@ -44,7 +47,7 @@
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    
+
     section {
       height: 100vh;
       scroll-snap-align: start;

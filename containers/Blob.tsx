@@ -5,6 +5,7 @@ import ProfilePicture from "@images/profPic.jpg";
 export default function Blob() {
   return (
     <div className={styles.blobsContainer}>
+      <div className={styles.blobs}>
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M37.5,-35.2C54,-20.9,76.6,-10.5,80.5,3.8C84.3,18.1,69.3,36.3,52.8,49.7C36.3,63.1,18.1,71.8,-0.2,72.1C-18.6,72.3,-37.2,64.1,-44.4,50.7C-51.6,37.2,-47.4,18.6,-46.1,1.3C-44.8,-16.1,-46.5,-32.1,-39.3,-46.3C-32.1,-60.6,-16.1,-72.9,-2.8,-70.1C10.5,-67.3,20.9,-49.4,37.5,-35.2Z"
@@ -65,6 +66,7 @@ export default function Blob() {
           transform="translate(100 100)"
         />
       </svg>
+      </div>
 
       <div className={styles.container}>
         <div className={styles.circle}>

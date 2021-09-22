@@ -1,8 +1,5 @@
+@import "/utils/colors.scss";
 @import "/utils/screenSizes.scss";
-.sectionAbout {
-  display: flex;
-  flex-direction: column;
-}
 .header {
   margin: 5% 0;
   max-width: 60em;
@@ -16,7 +13,7 @@
   box-shadow: 4px 8px 20px 5px hsl(28, 50%, 90%);
   padding: 2em;
   color: inherit;
-  
+
   .row {
     display: flex;
     flex-flow: row wrap;
@@ -58,10 +55,64 @@
       }
     }
   }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills {
+  flex: 1;
+  display: flex;
+  gap: 5%;
+}
+.list {
+  list-style: none;
+  padding: 0 20px;
 
-  .downloadCV {
-    display: inline-block;
-    margin-top: 2em;
+  li {
+    position: relative;
+    padding: 5px;
+
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: -20px;
+      top: -2px;
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+  }
+}
+
+.logos {
+  position: relative;
+  margin-right: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 5%;
+  
+
+  div {
+    max-height: 10vw;
+    min-height: 100px;
+    transition: transform .5s;
+    &:hover {
+      transform: translateY(-25px);
+    }
+  }
+}
+.downloadCV {
+  display: inline-block;
+  margin-top: 2em;
+
+  svg {
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(5px);
+    }
   }
 }
 .image {
@@ -76,9 +127,14 @@
     }
   }
 }
-
 @media only screen and (max-width: $mobile) {
-  .sectionAbout {
-    gap: 2em;
+  .logos {
+    margin-right: 0;
+    grid-template-columns: repeat(2, 1fr);
+
+    div {
+      min-height: 0;
+      max-height: 100px;
+    }
   }
 }
