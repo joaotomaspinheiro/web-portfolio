@@ -3,87 +3,95 @@
 .blobsContainer {
   flex: 2;
   position: relative;
+  display: grid;
+  place-items: center;
 
-  svg {
+  .blobs {
     position: absolute;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-duration: 10s;
-    animation-timing-function: ease-in-out;
+    height: 100%;
+    max-width: 50rem;
+    
+    svg {
+      position: absolute;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-duration: 10s;
+      animation-timing-function: ease-in-out;
 
-    &:nth-child(even) path {
-      fill: hsl(28, 100%, 90%);
-    }
-    &:not(:nth-child(even)) path {
-      fill: hsl(28, 100%, 60%);
-    }
+      &:nth-child(even) path {
+        fill: hsl(28, 100%, 90%);
+      }
+      &:not(:nth-child(even)) path {
+        fill: hsl(28, 100%, 60%);
+      }
 
-    &:nth-child(1) {
-      height: 20%;
-      animation-name: floating1;
-    }
+      &:nth-child(1) {
+        height: 20%;
+        animation-name: floating1;
+      }
 
-    &:nth-child(2) {
-      height: 10%;
-      left: 300px;
-      animation-name: floating2;
-      animation-delay: 3s;
-      animation-duration: 8s;
-    }
+      &:nth-child(2) {
+        height: 10%;
+        left: 300px;
+        animation-name: floating2;
+        animation-delay: 3s;
+        animation-duration: 8s;
+      }
 
-    &:nth-child(3) {
-      height: 20%;
-      bottom: 300px;
-      animation-name: floating3;
-      animation-delay: 1.5s;
-    }
-    &:nth-child(4) {
-      height: 25%;
-      bottom: 0;
-      right: 0;
-      animation-name: floating4;
-      animation-delay: 1s;
-    }
-    &:nth-child(5) {
-      height: 15%;
-      bottom: 0;
-      left: 200px;
-      animation-name: floating5;
-      animation-delay: 2.5s;
-    }
-    &:nth-child(6) {
-      height: 30%;
-      right: 200px;
-      animation-name: floating6;
-      animation-delay: 2.2s;
-      animation-duration: 25s;
-    }
-    &:nth-child(7) {
-      height: 19%;
-      right: 0;
-      animation-name: floating7;
-      animation-delay: 1.4s;
-    }
-    &:nth-child(8) {
-      height: 14%;
-      bottom: 0;
-      right: 200px;
-      animation-name: floating8;
-      animation-delay: 0.7s;
-    }
-    &:nth-child(9) {
-      height: 12%;
-      bottom: 200px;
-      right: 0;
-      animation-name: floating9;
-      animation-delay: 1.6s;
-    }
-    &:nth-child(10) {
-      height: 25%;
-      bottom: 0;
-      animation-name: floating10;
-      animation-delay: 2.5s;
-      animation-duration: 25s;
+      &:nth-child(3) {
+        height: 20%;
+        bottom: 300px;
+        animation-name: floating3;
+        animation-delay: 1.5s;
+      }
+      &:nth-child(4) {
+        height: 25%;
+        bottom: 0;
+        right: 0;
+        animation-name: floating4;
+        animation-delay: 1s;
+      }
+      &:nth-child(5) {
+        height: 15%;
+        bottom: 0;
+        left: 200px;
+        animation-name: floating5;
+        animation-delay: 2.5s;
+      }
+      &:nth-child(6) {
+        height: 30%;
+        right: 200px;
+        animation-name: floating6;
+        animation-delay: 2.2s;
+        animation-duration: 25s;
+      }
+      &:nth-child(7) {
+        height: 19%;
+        right: 0;
+        animation-name: floating7;
+        animation-delay: 1.4s;
+      }
+      &:nth-child(8) {
+        height: 14%;
+        bottom: 0;
+        right: 200px;
+        animation-name: floating8;
+        animation-delay: 0.7s;
+      }
+      &:nth-child(9) {
+        height: 12%;
+        bottom: 200px;
+        right: 0;
+        animation-name: floating9;
+        animation-delay: 1.6s;
+      }
+      &:nth-child(10) {
+        height: 25%;
+        bottom: 0;
+        animation-name: floating10;
+        animation-delay: 2.5s;
+        animation-duration: 25s;
+      }
     }
   }
 
@@ -168,9 +176,19 @@
   }
 }
 
+@media only screen and (min-width: $desktop) {
+  .blobsContainer {
+    .blobs {
+      width: 100%;
+    }
+  }
+}
+
 @media only screen and (max-width: $desktop - 1px) {
   .blobsContainer {
-
+    .blobs {
+      width: 100%;
+    }
     .circle {
       min-width: 28rem;
     }
@@ -179,7 +197,9 @@
 
 @media only screen and (max-width: $tablet) {
   .blobsContainer {
-
+    .blobs {
+      width: 100%;
+    }
     .circle {
       min-width: 24rem;
     }
