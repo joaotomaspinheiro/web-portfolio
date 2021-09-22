@@ -21,11 +21,11 @@ export default function SoftSkills() {
         value={80}
         color={colorScheme.primary}
       />
-      <ProgressBar title="Resilience" value={60} color={colorScheme.primary} />
+      <ProgressBar title="Resilient" value={60} color={colorScheme.primary} />
       
       
       <ProgressBar
-        title="Communication"
+        title="Communicative"
         value={50}
         color={colorScheme.primary}
       />
