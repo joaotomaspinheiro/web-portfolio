@@ -54,41 +54,6 @@ export default function About() {
           iconPosition="end"
         />
       </a>
-
-      {/*<div className={styles.card}>
-        <div className={styles.row}>
-          <div className={styles.description}>
-            <div className={styles.image}>
-              <Image
-                src={ProfilePicture}
-                className={styles.profilePicture}
-                alt="Image of me"
-                height={150}
-                width={150}
-                quality={100}
-                placeholder="blur"
-                objectFit="cover"
-              />
-            </div>
-            <div className={styles.info}>
-              <div className={styles.titles}>
-                <h3>Full Name:</h3>
-                <h3>Nationality:</h3>
-                <h3>English:</h3>
-              </div>
-              <div className={styles.values}>
-                <span>João Pinheiro</span>
-                <span>Portuguese</span>
-                <span>Upper Intermediate</span>
-              </div>
-            </div>
-          </div>
-          <TabBar />
-        </div>
-        <a className={styles.downloadCV} href="/Resume.pdf" target="_blank">
-          <Button text="View my resume" icon={<ArrowRight />} iconPosition="end" />
-        </a>
-  </div>*/}
     </section>
   );
 }
