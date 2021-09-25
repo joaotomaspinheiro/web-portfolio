@@ -11,18 +11,14 @@
 
   section {
     padding: 2rem 5%;
+    
 
-    &:nth-child(3) {
+    &:not(&:nth-child(1)) {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      gap: clamp(2em, 5%, 5%);
     }
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(200px);
-    opacity: 0;
   }
 }
 
@@ -31,7 +27,8 @@
     section {
       margin: 0 auto;
       max-width: 100rem;
-      //margin-right: navbar.$width;
+
+      
     }
     h1 {
       font-size: 4rem;
@@ -58,9 +55,6 @@
 
 @media only screen and (max-width: $desktop - 1px) {
   .main {
-    section {
-      margin-right: 0;
-    }
     h1 {
       font-size: 4rem;
     }

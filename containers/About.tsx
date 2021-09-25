@@ -11,13 +11,13 @@ import Redux from "@images/redux.svg";
 export default function About() {
   return (
     <section id={Routes.ABOUT}>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <h1 id={`${Routes.ABOUT}-header`}>About</h1>
         <p>
           I&apos;m an ambitious frontend developer ready to build and design
           digital experiences through the web.
         </p>
-      </div>
+      </header>
       <div className={styles.row}>
         <div className={styles.skills}>
           <div className={styles.hard}>
