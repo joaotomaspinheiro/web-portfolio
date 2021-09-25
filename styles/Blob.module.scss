@@ -32,7 +32,7 @@
 
       &:nth-child(2) {
         height: 10%;
-        left: 300px;
+        left: 50%;
         animation-name: floating2;
         animation-delay: 3s;
         animation-duration: 8s;
@@ -40,9 +40,10 @@
 
       &:nth-child(3) {
         height: 20%;
-        bottom: 300px;
+        top: 15%;
         animation-name: floating3;
         animation-delay: 1.5s;
+        
       }
       &:nth-child(4) {
         height: 25%;
@@ -50,20 +51,23 @@
         right: 0;
         animation-name: floating4;
         animation-delay: 1s;
+        
       }
       &:nth-child(5) {
         height: 15%;
         bottom: 0;
-        left: 200px;
+        left: 35%;
         animation-name: floating5;
         animation-delay: 2.5s;
+        
       }
       &:nth-child(6) {
         height: 30%;
-        right: 200px;
+        right: 35%;
         animation-name: floating6;
         animation-delay: 2.2s;
         animation-duration: 25s;
+        
       }
       &:nth-child(7) {
         height: 19%;
@@ -74,16 +78,18 @@
       &:nth-child(8) {
         height: 14%;
         bottom: 0;
-        right: 200px;
+        right: 35%;
         animation-name: floating8;
         animation-delay: 0.7s;
+        
       }
       &:nth-child(9) {
         height: 12%;
-        bottom: 200px;
+        bottom: 30%;
         right: 0;
         animation-name: floating9;
         animation-delay: 1.6s;
+
       }
       &:nth-child(10) {
         height: 25%;
@@ -166,7 +172,7 @@
 
 @keyframes floating9 {
   to {
-    transform: translate(-20px, -500px) rotate(155deg);
+    transform: translate(-20px, -200px) rotate(155deg);
   }
 }
 
