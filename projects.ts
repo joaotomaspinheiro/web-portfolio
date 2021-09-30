@@ -27,33 +27,6 @@ export const projects = {
       }
     ]
   },
-  "realEstateCRM": {
-    "tags": [
-      {
-        "title": "CRM"
-      },
-      {
-        "title": "Maps"
-      },
-      {
-        "title": "Real Estate"
-      }
-    ],
-    "usedTechnologies": [
-      {
-        "name": "React.js",
-        "image": React
-      },
-      {
-        "name": "Express.js",
-        "image": Express
-      },
-      {
-        "name": "PostgreSQL",
-        "image": PostgreSQL
-      }
-    ]
-  }
 }
 
 
