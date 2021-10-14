@@ -1,7 +1,8 @@
 import Card from "@components/Card";
 import { Routes } from "@utils/enums";
 import EcoMap from "@images/ecomap.jpg";
-import { projects } from "projects";
+import Portfolio from "@images/cover.jpg";
+import projects from "projects";
 import styles from "@styles/Projects.module.scss";
 
 export default function Projects() {
@@ -18,6 +19,14 @@ export default function Projects() {
           tags={projects.ecomap.tags}
           usedTechnologies={projects.ecomap.usedTechnologies}
           sourceCode="https://github.com/joaotomaspinheiro/EcoMap"
+        />
+        <Card
+          image={Portfolio}
+          title="Portfolio"
+          description="Web based portfolio for knowing more about me! 😀"
+          tags={projects.portfolio.tags}
+          usedTechnologies={projects.portfolio.usedTechnologies}
+          sourceCode="https://github.com/joaotomaspinheiro/web-portfolio"
         />
       </div>
     </section>
