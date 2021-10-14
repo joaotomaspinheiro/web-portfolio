@@ -23,10 +23,9 @@ export default function Card(props: Props) {
   const handleClick = (url: string) => window.open(url, "_blank");
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={props.demo ? () => handleClick(props.demo!) : undefined}>
       <div
         className={styles.image}
-        onClick={props.demo ? () => handleClick(props.demo!) : undefined}
       >
         <Image
           src={props.image}

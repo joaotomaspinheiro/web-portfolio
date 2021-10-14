@@ -1,5 +1,6 @@
 @import "/utils/colors.scss";
 .card {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,7 +17,6 @@
   }
 }
 .image {
-  cursor: pointer;
   position: relative;
   height: 250px;
   border-radius: inherit;
