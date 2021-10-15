@@ -20,10 +20,10 @@ interface Props {
 }
 
 export default function Card(props: Props) {
-  const handleClick = (url: string) => window.open(url, "_blank");
+  const openNewTab = (url: string) => window.open(url, "_blank", "noopener noreferrer");
 
   return (
-    <div className={styles.card} onClick={props.demo ? () => handleClick(props.demo!) : undefined}>
+    <div className={styles.card} onClick={() => openNewTab(props.demo ? props.demo! : props.sourceCode)}>
       <div
         className={styles.image}
       >
@@ -70,7 +70,7 @@ export default function Card(props: Props) {
             icon={<Globe />}
             text="Demo"
             weight="fill"
-            onClick={() => handleClick(props.demo!)}
+            onClick={() => openNewTab(props.demo!)}
           />
         )}
 
@@ -78,7 +78,7 @@ export default function Card(props: Props) {
           icon={<GithubLogo />}
           text="Source code"
           weight="text"
-          onClick={() => handleClick(props.sourceCode)}
+          onClick={() => openNewTab(props.sourceCode)}
         />
       </div>
     </div>
