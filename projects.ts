@@ -2,6 +2,8 @@ import React from "@images/react.svg"
 import Next from "@images/next.svg"
 import Express from "@images/expressjs.svg"
 import PostgreSQL from "@images/postgresql.svg"
+import SASS from "@images/sass.svg"
+import Redux from "@images/redux.svg"
 
 const projects = {
   "ecomap": {
@@ -38,6 +40,14 @@ const projects = {
       {
         "name": "Next.js",
         "image": Next
+      },
+      {
+        "name": "SASS",
+        "image": SASS
+      },
+      {
+        "name": "Redux",
+        "image": Redux
       },
     ]
   },
