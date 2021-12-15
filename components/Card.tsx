@@ -20,13 +20,15 @@ interface Props {
 }
 
 export default function Card(props: Props) {
-  const openNewTab = (url: string) => window.open(url, "_blank", "noopener noreferrer");
+  const openNewTab = (url: string) =>
+    window.open(url, "_blank", "noopener noreferrer");
 
   return (
-    <div className={styles.card} onClick={() => openNewTab(props.demo ? props.demo! : props.sourceCode)}>
-      <div
-        className={styles.image}
-      >
+    <div
+      className={styles.card}
+      onClick={() => openNewTab(props.demo ? props.demo! : props.sourceCode)}
+    >
+      <div className={styles.image}>
         <Image
           src={props.image}
           alt="Project image"
@@ -70,7 +72,10 @@ export default function Card(props: Props) {
             icon={<Globe />}
             text="Demo"
             weight="fill"
-            onClick={() => openNewTab(props.demo!)}
+            onClick={(e) => {
+              e.stopPropagation();
+              openNewTab(props.demo!);
+            }}
           />
         )}
 
@@ -78,7 +83,10 @@ export default function Card(props: Props) {
           icon={<GithubLogo />}
           text="Source code"
           weight="text"
-          onClick={() => openNewTab(props.sourceCode)}
+          onClick={(e) => {
+            e.stopPropagation();
+            openNewTab(props.sourceCode);
+          }}
         />
       </div>
     </div>
