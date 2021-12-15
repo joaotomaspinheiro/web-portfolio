@@ -5,6 +5,8 @@ import styles from "@styles/About.module.scss";
 import { ArrowRight } from "phosphor-react";
 import Flutter from "@images/flutter.svg";
 import Dart from "@images/dart.svg";
+import React from "@images/react.svg";
+import Typescript from "@images/typescript.svg";
 
 export default function About() {
   return (
@@ -40,6 +42,8 @@ export default function About() {
         <div className={styles.logos}>
           <Image src={Flutter} alt="Flutter" />
           <Image src={Dart} alt="Dart" />
+          <Image src={React} alt="React Native" />
+          <Image src={Typescript} alt="Typescript" />
         </div>
       </div>
 
