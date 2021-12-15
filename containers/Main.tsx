@@ -11,7 +11,7 @@ export default function Main() {
       <div className={styles.content}>
         <h1 id={`${Routes.MAIN}-header`}>Hello!</h1>
         <h1 id={`${Routes.MAIN}-header`}>I&apos;m João!</h1>
-        <h3>Frontend Developer</h3>
+        <h3>Mobile Developer</h3>
 
         <div className={styles.animatedArrow}>
           <Image src={ArrowDown} alt="Arrow down" onClick={() => document.getElementById(Routes.ABOUT)!.scrollIntoView({behavior: "smooth"})} />
