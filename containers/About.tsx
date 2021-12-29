@@ -46,7 +46,6 @@ export default function About() {
           <Image src={Redux} alt="Redux" />
         </div>
       </div>
-
       <a className={styles.downloadCV} href="/Resume.pdf" target="_blank">
         <Button
           text="View my resume"
