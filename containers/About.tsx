@@ -4,9 +4,9 @@ import { Routes } from "@utils/enums";
 import styles from "@styles/About.module.scss";
 import { ArrowRight } from "phosphor-react";
 import React from "@images/react.svg";
+import Javascript from "@images/javascript.svg";
 import Typescript from "@images/typescript.svg";
 import Sass from "@images/sass.svg";
-import Redux from "@images/redux.svg";
 
 export default function About() {
   return (
@@ -24,9 +24,9 @@ export default function About() {
             <h2>Hard skills</h2>
             <ul className={styles.list}>
               <li>React.js</li>
-              <li>Typescript</li>
+              <li>Javascript</li>
               <li>Sass</li>
-              <li>Redux</li>
+              <li>Typescript</li>
             </ul>
           </div>
           <div className={styles.soft}>
@@ -42,8 +42,8 @@ export default function About() {
         <div className={styles.logos}>
           <Image src={React} alt="React.js" />
           <Image src={Sass} alt="Sass" />
+          <Image src={Javascript} alt="Javascript" />
           <Image src={Typescript} alt="Typescript" />
-          <Image src={Redux} alt="Redux" />
         </div>
       </div>
 
